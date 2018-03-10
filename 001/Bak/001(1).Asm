@@ -18,7 +18,7 @@ next_module:
         cmp  [edi+12*2],cx
         jnz  next_module
 ;****************************************************************************************       
-        mov edx,eax     ;eax保存着KERNEL32基址 ,xp  win7 64位通杀
+    mov edx,eax     ;eax保存着KERNEL32基址 ,xp  win7 64位通杀
     mov eax,(IMAGE_DOS_HEADER ptr [edx]).e_lfanew   ;得到IMAGE_NT_HEADERS地址
     mov eax,(IMAGE_NT_HEADERS ptr [edx + eax]).OptionalHeader.DataDirectory.VirtualAddress  ;得到导出表RVA
     add eax,edx                 ;导出表在内存的实际地址

@@ -1,3 +1,5 @@
+;#只是由peb获取kernel的句柄，然后获取getprocaddress和loadlibrary函数的地址，进而使用函数加载别的函数实现别的函数的功能。
+;只是通过fs寄存器汇编层自定义使用链接库函数，OD调试器中可以看到函数调用参数信息等。
 .386
 .model flat,stdcall
 option casemap:none
